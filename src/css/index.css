@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1128px;
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.search-form {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.input-form {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-right: 8px;
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.input-form:hover {
+  border: 1px solid #000;
+}
+
+.input-form:focus {
+  border: transparent;
+  outline: 1px solid #4e75ff;
+}
+
+.input-form::placeholder {
+  color: #808080;
+}
+
+.btn-form,
+.load-more {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-form:hover,
+.btn-form:focus {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  overflow-x: hidden;
+}
+
+.gallery-list-item {
+  overflow: hidden;
+  width: calc(33.33% - 24px);
+  height: 200px;
+  position: relative;
+  border: 1px solid #808080;
+}
+
+.gallery-list-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.img-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  padding: 4px 20px;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: none;
+  margin: 16px auto;
+  position: relative;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #1308ea;
+  position: absolute;
+  animation: animloader 2s linear infinite;
+}
+
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.load-more{
+  display: none;
+  margin-top: 32px;
+ align-items: center;
+ justify-content: center;
+ margin-left: auto;
+ margin-right: auto;
+  width: 125px;
+}
